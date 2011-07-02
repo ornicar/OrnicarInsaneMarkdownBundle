@@ -10,6 +10,11 @@
             <argument>%ornicar_insane_markdown.path%</argument>
         </service>
 
+        <service id="twig.extension.ornicar_insane_markdown" class="Ornicar\InsaneMarkdownBundle\Twig\InsaneMarkdownTwigExtension" public="false">
+            <argument type="service" id="ornicar_insane_markdown" />
+            <tag name="twig.extension" />
+        </service>
+
     </services>
 
 </container>
