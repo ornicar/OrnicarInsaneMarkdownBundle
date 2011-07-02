@@ -7,7 +7,7 @@
     <services>
 
         <service id="ornicar_insane_markdown" class="Ornicar\InsaneMarkdownBundle\InsaneMarkdown" public="true">
-            <argument>%ornicar_insane_markdown%</argument>
+            <argument>%ornicar_insane_markdown.path%</argument>
         </service>
 
     </services>

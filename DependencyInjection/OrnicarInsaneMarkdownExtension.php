@@ -21,6 +21,10 @@ class OrnicarInsaneMarkdownExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('config.xml');
 
+        $processor = new Processor();
+        $configuration = new Configuration();
+        $config = $processor->process($configuration->getConfigTree(), $configs);
+
         $container->setParameter('ornicar_insane_markdown.path', $config['path']);
     }
 }
