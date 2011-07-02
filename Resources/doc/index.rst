@@ -24,7 +24,7 @@ Add InsaneMarkdownBundle to your src/ dir
 
 ::
 
-    $ git submodule add git://github.com/Ornicar/OrnicarInsaneMarkdownBundle.git vendor/bundles/Ornicar/InsaneMarkdownBundle
+    $ git submodule add git://github.com/ornicar/OrnicarInsaneMarkdownBundle.git vendor/bundles/Ornicar/InsaneMarkdownBundle
 
 Add the Ornicar namespace to your autoloader
 ----------------------------------------
