@@ -2,24 +2,37 @@
 
 namespace Ornicar\InsaneMarkdownBundle;
 
-use Symfony\Component\Process\ExecutableFinder;
-
+/**
+ * Markdown parser.
+ * Delegates the parsing to an executable.
+ *
+ * @author Thibault Duplessis <thibault.duplessis@gmail.com>
+ */
 class InsaneMarkdown
 {
+    /**
+     * The markdown executable path
+     *
+     * @var string
+     */
     private $path;
 
-    public function __construct($path = null)
+    /**
+     * @param string the markdown executable path
+     */
+    public function __construct($path)
     {
-        if ($path) {
-            $this->path = $path;
-        } else {
-            $finder = new ExecutableFinder();
-            $this->path = $finder->find('markdown');
-        }
+        $this->path = $path;
     }
 
-    public function transform($string)
+    /**
+     * Transform markdown text to HTML
+     *
+     * @param string $text the markdown text
+     * @return string the produced HTML
+     */
+    public function transform($text)
     {
-        return shell_exec(sprintf('echo %s | %s', escapeshellarg($string), $this->path));
+        return shell_exec(sprintf('echo %s | %s', escapeshellarg($text), $this->path));
     }
 }
