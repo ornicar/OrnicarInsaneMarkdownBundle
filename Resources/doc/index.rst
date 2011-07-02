@@ -77,3 +77,10 @@ Transform your markdown text to HTML at the speed of light::
 
     echo $markdown->transform('Some mardown text');
     // <p>Some markdown text</p>
+
+Twig
+====
+
+A twig filter is available::
+
+    {{ someText|markdown }}
