@@ -1,3 +1,5 @@
+DEPRECATED - Use PHPSkirt instead https://github.com/chobie/phpskirt
+
 Let's face it: PHP markdown implementations are slow.
 
 There is a better, faster language for this job: C.
