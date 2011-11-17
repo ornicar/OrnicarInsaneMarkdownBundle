@@ -1,4 +1,4 @@
-DEPRECATED - Use PHPSkirt instead https://github.com/chobie/phpskirt
+DEPRECATED - Use PHP + Sundown instead https://github.com/chobie/php-sundown
 
 Let's face it: PHP markdown implementations are slow.
 
